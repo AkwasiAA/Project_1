@@ -16,6 +16,10 @@ def products():
 
 # NEW
 # GET '/products/new'
+@products_blueprint.route("/products/new", methods=['GET'])
+def new_product():
+    suppliers = supplier_repository.select_all()
+    return render_template("products/new.html", all_suppliers = suppliers)
 
 
 # CREATE
