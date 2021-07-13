@@ -7,6 +7,9 @@ import repositories.supplier_repository as supplier_repository
 
 products_blueprint = Blueprint("products", __name__)
 
+
+# INDEX
+# GET '/products'
 @products_blueprint.route("/products")
 def products():
     products = product_repository.select_all()
