@@ -9,12 +9,16 @@
             {{product.product_name}}
             <div class="description">
                 {{product.prod_description}}
+                <br>
                 <span class="quantity">Stock Level: {{product.quantity}}</span>
-                <span class="purchase">£{{product.purchase_price}}</span>
-                <span class="selling">£{{product.selling_price}}</span>
+                <br>
+                <span class="purchase">Purchased for: £{{product.purchase_price}}</span>
+                <br>
+                <span class="selling">Selling Price: £{{product.selling_price}}</span>
                 <p><i>{{product.supplier.supplier_name}}</i></p>
                 <div class="id">
-                    Product id: {{product.id}}
+                    Product ID: {{product.id}}
+                    <hr>
                 </div>
             </div>
         </div>

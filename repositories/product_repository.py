@@ -6,7 +6,7 @@ from models.product import Product
 import repositories.supplier_repository as supplier_repository
 
 def save(product):
-    sql = "INSERT INTO products (product_name, prod_description, quantity, purchase_price, selling_price, supplier_id) VALUES (%s, %s, %s, %s, %s. %s) RETURNING *"
+    sql = "INSERT INTO products (product_name, prod_description, quantity, purchase_price, selling_price, supplier_id) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
     values = [product.product_name, product.prod_description, product.quantity, product.purchase_price, product.selling_price, product.supplier.id]
     results = run_sql(sql, values)
     id = results[0]['id']

@@ -17,6 +17,7 @@ def products():
 # NEW
 # GET '/products/new'
 
+
 # CREATE
 # POST '/products'
 
