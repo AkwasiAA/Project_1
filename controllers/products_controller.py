@@ -45,7 +45,11 @@ def show_product(id):
 
 # EDIT
 # GET '/products/<id>/edit'
-
+@products_blueprint.route("/products/<id>/edit", methods=['GET'])
+def edit_product(id):
+    product = product_repository.select(id)
+    suppliers = supplier_repository.select_all()
+    return render_template('products/edit.html', product = product, all_suppliers = suppliers)
 
 # UPDATE
 # PUT/POST '/products/<id>'
