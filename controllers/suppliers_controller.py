@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
+from models import supplier
 from models.supplier import Supplier
 import repositories.product_repository as product_repository
 import repositories.supplier_repository as supplier_repository
@@ -23,16 +24,32 @@ def new_supplier():
 
 # CREATE
 # POST '/suppliers'
-@suppliers_blueprint
+@suppliers_blueprint.route("/suppliers", methods =['POST'])
+def create_supplier():
+    supplier_name = request.form['supplier_name']
+    supplier = Supplier(supplier_name)
+    supplier_repository.save(supplier)
+    return redirect('/suppliers')
 
 # SHOW
 # GET '/suppliers/<id>'
+@suppliers_blueprint.route("/suppliers/<id>", methods=['GET'])
+def show_supplier(id):
+    supplier = supplier_repository.select(id)
+    return render_template('suppliers/show.html', supplier = supplier)
+
 
 # EDIT
 # GET '/suppliers/<id>/edit'
+@suppliers_blueprint.route("/suppliers/<id>/edit", methods=['GET'])
+def edit_supplier(id):
+    supplier = supplier_repository.select(id)
+    products = product_repository.select_all()
+    return render_template('books/edit.html', supplier = supplier, all_products = products)
 
 # UPDATE
 # PUT/POST '/suppliers/<id>'
+
 
 # DELETE
 # DELETE '/suppliers/<id>'
