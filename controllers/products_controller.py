@@ -1,6 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect
 from flask import Blueprint
-from flask.templating import render_template
 from models.product import Product
 import repositories.product_repository as product_repository
 import repositories.supplier_repository as supplier_repository
