@@ -12,8 +12,6 @@ def products():
     products = product_repository.select_all
     return render_template("products/index.html", all_products = products)
 
-
-
 # NEW
 # GET '/products/new'
 

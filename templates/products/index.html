@@ -1,4 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="product-container">
+
+    {% for product in all_products %}
+    <div class="product">
+        <div class="name">
+            {{product.product_name}}
+            <div class="description">
+                {{product.prod_description}}
+                <span class="quantity">Stock Level: {{product.quantity}}</span>
+                <span class="purchase">£{{product.purchase_price}}</span>
+                <span class="selling">£{{product.selling_price}}</span>
+                <p><i>{{product.supplier.supplier_name}}</i></p>
+                <div class="id">
+                    Product id: {{product.id}}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}
