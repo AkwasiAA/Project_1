@@ -8,8 +8,19 @@
 .bin-button{
     display: contents;
     font-size: 65%;
+    
 }
 
 .delete-product{
+    display: inline;
+}
+
+.edit-button{
+    display: contents;
+    font-size: 65%;
+    
+}
+
+.update-product{
     display: inline;
 }
