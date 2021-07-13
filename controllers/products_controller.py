@@ -32,3 +32,7 @@ def products():
 
 # DELETE
 # DELETE '/products/<id>'
+@products_blueprint.route("/products/<id>/delete", methods=['POST'])
+def delete_product(id):
+    product_repository.delete(id)
+    return redirect('/products')

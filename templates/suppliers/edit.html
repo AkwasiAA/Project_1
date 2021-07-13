@@ -7,14 +7,8 @@
         <input type="text" id="supplier_name" name="supplier_name" value="{{supplier.supplier_name}}" required>
     </div>
 
-    <div>
-        <label for="supplier_id">Supplier ID:</label>
-        <select id="supplier_id" name="supplier_id">
-            {% for supplier in all_suppliers %}
-              <option value="{{supplier.id}}"
-                {% if supplier. %}
-        </select>
-    </div>
+    <button type="submit">Update Supplier</button>
+
 </form>
 
 {% endblock %}
