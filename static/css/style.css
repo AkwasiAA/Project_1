@@ -1,0 +1,15 @@
+.buttons{
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 1.4em;
+    color: #aab8c2;
+}
+
+.bin-button{
+    display: contents;
+    font-size: 65%;
+}
+
+.delete-product{
+    display: inline;
+}

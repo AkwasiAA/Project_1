@@ -18,7 +18,14 @@
                 <p><i>{{product.supplier.supplier_name}}</i></p>
                 <div class="id">
                     Product ID: {{product.id}}
-                    <hr>
+                    <div>
+                        <div class="buttons">
+                            <form class="delete-product" action="/products/{{product.id}}/delete" method="POST">
+                            <button class="bin-button"><i class="fa-solid fa-trash-can" style="color:blue" aria-hidden="true"></i></button>
+                            </form>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
