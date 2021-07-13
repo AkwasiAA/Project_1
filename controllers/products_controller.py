@@ -24,6 +24,17 @@ def new_product():
 
 # CREATE
 # POST '/products'
+@products_blueprint.route("/products", methods =['POST'])
+def create_product():
+    product_name = request.form['product_name']
+    prod_description = request.form['prod_description']
+    quantity = request.form['quantity']
+    purchase_price = request.form['purchase_price']
+    selling_price = request.form['selling_price']
+    supplier = supplier_repository.select(request.form['supplier_id'])
+    product = Product(product_name, prod_description, quantity, purchase_price, selling_price, supplier)
+    product_repository.save(product)
+    return redirect('/products')
 
 # SHOW
 # GET '/products/<id>'
