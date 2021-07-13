@@ -38,9 +38,14 @@ def create_product():
 
 # SHOW
 # GET '/products/<id>'
+@products_blueprint.route("/products/<id>", methods=['GET'])
+def show_product(id):
+    product = product_repository.select(id)
+    return render_template('products/show.html', product = product)
 
 # EDIT
 # GET '/products/<id>/edit'
+
 
 # UPDATE
 # PUT/POST '/products/<id>'
