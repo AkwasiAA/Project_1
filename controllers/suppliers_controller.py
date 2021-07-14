@@ -44,7 +44,7 @@ def show_supplier(id):
 def edit_supplier(id):
     supplier = supplier_repository.select(id)
     products = product_repository.select_all()
-    return render_template('books/edit.html', supplier = supplier, all_products = products)
+    return render_template('suppliers/edit.html', supplier = supplier, all_products = products)
 
 # UPDATE
 # PUT/POST '/suppliers/<id>'
