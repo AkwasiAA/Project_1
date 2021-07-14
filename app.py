@@ -12,8 +12,8 @@ app.register_blueprint(products_blueprint)
 
 @app.route('/')
 def home():
-    products = product_repository.select_all()
-    return render_template('products/index.html',all_products = products)
+    return render_template('index.html')
+
 
 app.register_blueprint(suppliers_blueprint)
 

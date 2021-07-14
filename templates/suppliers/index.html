@@ -10,9 +10,20 @@
             <br>
             <div class="id">
                 Supplier id: {{supplier.id}}
-                <br>
-                <br>
+                <div class="buttons">
+                    <form class="create-product" action="/suppliers/new" method="GET">
+                    <button class="create-button"><i class="fas fa-plus-square" style="color: blue;" aria-hidden="true"></i></button>
+                    </form>
+                    <form class="update-product" action="/suppliers/{{supplier.id}}/edit" method="GET">
+                    <button class="edit-button"><i class="fas fa-edit" style="color: blue;" aria-hidden="true"></i></button>
+                    </form>
+                    <form class="delete-product" action="/suppliers/{{supplier.id}}/delete" method="POST">
+                    <button class="bin-button"><i class="fa fa-trash fa-2x" style="color:blue" aria-hidden="true"></i></button>
+                    </form>
+                    <hr>
                 </div>
+                <br>
+                <br>
             </div>
         </div>
     </div>

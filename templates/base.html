@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/72a5714ccb.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
     <title>Watches of Edinburgh</title>
@@ -17,6 +16,7 @@
             <ul class="mainmenu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="/suppliers">Suppliers</a></li>
+                <li><a href="/products">Products</a></li>
             </ul>
         </nav>
     </header>
@@ -24,8 +24,5 @@
         {% block content %}
         {% endblock %}
     </div>
-
-    {% block home %}
-    {% endblock %}
 </body>
 </html>

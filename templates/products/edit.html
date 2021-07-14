@@ -33,7 +33,7 @@
             {% for supplier in all_suppliers %}
               <option value="{{supplier.id}}"
                 {% if product.supplier.id == supplier.id %} selected="selected"{% endif %}>
-                {{ supplier.supplier_name() }}
+                {{ supplier.supplier_name }}
             </option>
             {% endfor %}
         </select>
