@@ -32,6 +32,7 @@ body {
     font-size: 1.4em;
     color: midnightblue;
     display: inline-flex;
+    
 }
 
 .bin-button {
@@ -60,6 +61,9 @@ body {
     display: contents;
     font-size: 65%;
     color: blue;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .update-product {
@@ -69,23 +73,37 @@ body {
 #launch-image {
     width:100vw;
     height:100vh;
-    background-image: url('/static/css/images/WatchBox_Collectors.jpeg');
+    background: url('/static/css/images/WatchBox_Collectors.jpeg') no-repeat center fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: auto;
 }
 
 .entry-container {
     width: auto;
     height: auto;
     margin: auto;
-    display: block;
     color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 20px;
+    
 }
 
 .mainmenu {
     color: antiquewhite;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .mainmenu > ul > a {
     color: antiquewhite;
+    display: flex;
 }

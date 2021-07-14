@@ -6,15 +6,16 @@
     <hr>
     <p>Description: {{product.prod_description}}</p>
     <hr>
-    <p>{{product.quantity}}</p>
     {% if product.quantity == 0 %}
-      <span &#10060;></span>
+      <span>&#10060;</span>
       {{product.quantity}}
-      {% elif product.quantity < 2 %}
-      <span &#10060;></span>
+    {% endif %}
+      {% if product.quantity <= 2 %}
+      <span> &#9888;</span>
       {{product.quantity}}
-      {% elif product.quantity > 3 %}
-      <span &#9989;></span>
+    {% endif %}
+      {% if product.quantity >= 3 %}
+      <span> &#9989;</span>
       {{product.quantity}}
     {% endif %}
     <hr>

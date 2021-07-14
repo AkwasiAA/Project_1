@@ -18,14 +18,25 @@
                 <p><i>{{product.supplier.supplier_name}}</i></p>
                 <div class="id">
                     Product ID: {{product.id}}
+                    &nbsp;
+                    <a href="/products/{{product.id}}">View Product</a>
+                    &nbsp;
                     <div>
                         <div class="buttons">
                             <form class="create-product" action="/products/new" method="GET">
                             <button class="create-button"><i class="fas fa-plus-square" style="color: blue;" aria-hidden="true"></i></button>
                             </form>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
                             <form class="update-product" action="/products/{{product.id}}/edit" method="GET">
                             <button class="edit-button"><i class="fas fa-edit" style="color: blue;" aria-hidden="true"></i></button>
                             </form>
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
                             <form class="delete-product" action="/products/{{product.id}}/delete" method="POST">
                             <button class="bin-button"><i class="fa fa-trash" style="color:blue" aria-hidden="true"></i></button>
                             </form>
