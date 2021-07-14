@@ -1,31 +1,35 @@
-.buttons{
+body {
+    background-color: aqua;
+}
+
+.buttons {
     margin-top: 10px;
     margin-left: 2px;
     font-size: 1.4em;
     color: #aab8c2;
 }
 
-.bin-button{
+.bin-button {
     display: contents;
     font-size: 65%;
     
 }
 
-.delete-product{
+.delete-product {
     display: inline;
 }
 
-.edit-button{
+.edit-button {
     display: contents;
     font-size: 65%;
     
 }
 
-.update-product{
+.update-product {
     display: inline;
 }
 
-#launch-image{
+#launch-image {
     width:100vw;
     height:100vh;
     background-image: url('images/WatchBox_Collectors.jpeg');
