@@ -24,3 +24,11 @@
 .update-product{
     display: inline;
 }
+
+#launch-image{
+    width:100vw;
+    height:100vh;
+    background-image: url('images/WatchBox_Collectors.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
