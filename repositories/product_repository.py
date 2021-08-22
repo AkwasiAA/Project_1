@@ -15,14 +15,16 @@ def save(product):
 
 def select_all():
     products = []
+    # create an sql statement to select all products
 
     sql = "SELECT * FROM products"
     results = run_sql(sql)
-
+    # execute sql statement and get results
     for row in results:
         supplier = supplier_repository.select(row['supplier_id'])
         product = Product(row['product_name'], row['prod_description'], row['quantity'], row['purchase_price'], row['selling_price'], supplier, row['id'] )
         products.append(product)
+    # return list of all products
     return products
 
 def select(id):
